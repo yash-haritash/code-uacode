@@ -1,0 +1,24 @@
+{
+  "name": "code-uacode",
+  "version": "1.0.0",
+  "main": "interfaceFetch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yash-haritash/code-uacode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yash-haritash/code-uacode/issues"
+  },
+  "homepage": "https://github.com/yash-haritash/code-uacode#readme",
+  "description": "",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module"
+}
