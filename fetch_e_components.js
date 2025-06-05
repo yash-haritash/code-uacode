@@ -1,4 +1,4 @@
-const fs = require('fs');
+import { writeFileSync } from 'fs';
 
 async function fetchEComponentData1() {
     try {
@@ -52,7 +52,7 @@ async function fetchEComponentData1() {
         }
 
         const data = await response.json();
-        fs.writeFileSync('e_component_1.json', JSON.stringify(data, null, 2));
+        writeFileSync('e_component_1.json', JSON.stringify(data, null, 2));
         console.log('Data successfully written to e_component_1.json');
     } catch (error) {
         console.error('Error fetching or writing data for e_component_1.json:', error);
@@ -122,7 +122,7 @@ async function fetchEComponentData2() {
         }
 
         const data = await response.json();
-        fs.writeFileSync('e_component_2.json', JSON.stringify(data, null, 2));
+        writeFileSync('e_component_2.json', JSON.stringify(data, null, 2));
         console.log('Data successfully written to e_component_2.json');
     } catch (error) {
         console.error('Error fetching or writing data for e_component_2.json:', error);
@@ -192,7 +192,7 @@ async function fetchEComponentData3() {
         }
 
         const data = await response.json();
-        fs.writeFileSync('e_component_3.json', JSON.stringify(data, null, 2));
+        writeFileSync('e_component_3.json', JSON.stringify(data, null, 2));
         console.log('Data successfully written to e_component_3.json');
     } catch (error) {
         console.error('Error fetching or writing data for e_component_3.json:', error);
