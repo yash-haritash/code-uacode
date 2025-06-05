@@ -1,7 +1,9 @@
 {
-  "timestamp": "2025-06-05T09:47:40.041Z",
+  "timestamp": "2025-06-05T10:25:57.051Z",
+  "interfaceId": "ua-workflows",
+  "pageUrl": "https://a.qa.unifyapps.com/p/0/interfaces/ua-workflows/builder/ua-workflow-insights",
   "totalComponents": 3,
   "cursor": {
-    "previous": "eyJyZXZlcnNlIjp0cnVlLCJmaWx0ZXIiOnsiZmllbGQiOiJwcm9wZXJ0aWVzLm5hbWUiLCJvcCI6IkxUIiwidmFsdWVzIjpbIlVuaWZ5QXBwcyBXb3JrZmxvdyBpbnNpZ2h0cyJdfX0="
+    "previous": "eyJmaWx0ZXIiOnsiZmllbGQiOiJwcm9wZXJ0aWVzLm5hbWUiLCJvcCI6IkxUIiwidmFsdWVzIjpbIlVuaWZ5QXBwcyBXb3JrZmxvdyBpbnNpZ2h0cyJdfSwicmV2ZXJzZSI6dHJ1ZX0="
   }
 }
