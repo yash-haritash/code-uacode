@@ -1,0 +1,78 @@
+{
+    "createdTime": 1727792501994,
+    "deleted": false,
+    "deploymentState": {
+        "deployedAt": 1749046725302,
+        "deployedBy": -1,
+        "entityVersion": 1588,
+        "version": 600
+    },
+    "entityType": "e_interface",
+    "grants": {
+        "configs": [
+            {
+                "permissions": [
+                    "V"
+                ],
+                "principalType": "GLOBAL"
+            },
+            {
+                "permissions": [
+                    "A",
+                    "C",
+                    "S",
+                    "D",
+                    "E",
+                    "V",
+                    "M_L"
+                ],
+                "principalIds": [
+                    "6757db349b09ba5b01b6c44c"
+                ],
+                "principalType": "USER_GROUPS"
+            }
+        ]
+    },
+    "id": "ua-workflows",
+    "lastModifiedBy": 522,
+    "modifiedTime": 1749108422084,
+    "ownerUserId": 0,
+    "properties": {
+        "standard": true,
+        "deviceDetails": {
+            "base": "desktop"
+        },
+        "metadata": {
+            "logo": {
+                "small": "https://assets.unifyapps.com/theme/unifyapps/unify.svg",
+                "large": "https://assets.unifyapps.com/theme/unifyapps/unify-logo.svg",
+                "favicon": "/favicon.png"
+            },
+            "_counter": {
+                "_pageCount": 0,
+                "_moduleCount": 0
+            }
+        },
+        "navigation": {
+            "secondary": [],
+            "defaultPageId": "ua_workflows_aggregated_insights",
+            "primary": []
+        },
+        "interfacePageIdVsSlugMap": {
+            "ua_workflow_insights": "ua-workflow-insights",
+            "ua_workflows_aggregated_insights": "ua-workflows-aggregated-insights"
+        },
+        "skipAutoSyncOnModification": true,
+        "pagePermissions": {
+            "ua_workflow_insights": {}
+        },
+        "name": "UnifyApps Workflows",
+        "locale": {
+            "defaultLocale": "en-US"
+        },
+        "syncFromSourceCustomer": true
+    },
+    "standard": false,
+    "tags": [],
+    "version": 1590
+}

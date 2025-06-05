@@ -1,0 +1,1645 @@
+{
+    "cursor": {
+        "previous": "eyJyZXZlcnNlIjp0cnVlLCJmaWx0ZXIiOnsiZmllbGQiOiJwcm9wZXJ0aWVzLm5hbWUiLCJvcCI6IkxUIiwidmFsdWVzIjpbIlVuaWZ5QXBwcyBXb3JrZmxvdyBpbnNpZ2h0cyJdfX0="
+    },
+    "hasMore": false,
+    "objects": [
+        {
+            "createdTime": 1727792453343,
+            "deleted": false,
+            "deploymentState": {
+                "deployedAt": 1749046725052,
+                "deployedBy": -1,
+                "entityVersion": 673,
+                "version": 600
+            },
+            "entityType": "e_component",
+            "id": "ua_workflow_insights",
+            "lastModifiedBy": -1,
+            "modifiedTime": 1749046725055,
+            "ownerUserId": 0,
+            "properties": {
+                "layout": {
+                    "header": "b_EQFyj",
+                    "body": "root_id"
+                },
+                "componentType": "PAGE",
+                "metadata": {
+                    "dependencyById": {
+                        "kygSNgQji931eq0z9V6n2": {
+                            "dataSourceId": "__ua_workflows_data_source_18__",
+                            "type": "DATA_SOURCE"
+                        },
+                        "sPH9bVCVT_aE5j9ZjbF7M": {
+                            "type": "LOOKUP_REQUEST",
+                            "lookupRequest": {
+                                "keys": "objects[*].columns.STATUS",
+                                "name": "$LOOKUP$__ua_workflows_data_source_18__$$WORKFLOW_EXECUTION_STATUS$$objects_$_$columns$STATUS",
+                                "lookupType": "WORKFLOW_EXECUTION_STATUS",
+                                "type": "ByKeys"
+                            }
+                        }
+                    },
+                    "_blockCounter": {
+                        "Container": 2,
+                        "Filters": 1,
+                        "MultiStatsCard": 3,
+                        "StatCard": 9,
+                        "Icon": 3,
+                        "Chart": 2,
+                        "Stack": 17,
+                        "Card": 11,
+                        "Typography": 2
+                    },
+                    "dependencies": {
+                        "kygSNgQji931eq0z9V6n2": "sPH9bVCVT_aE5j9ZjbF7M"
+                    }
+                },
+                "outputSchema": {
+                    "schema": {},
+                    "layout": {},
+                    "dynamic": false,
+                    "type": "SCHEMA_AND_LAYOUT"
+                },
+                "inputSchema": {
+                    "schema": {
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                            "automationId": {
+                                "default": "66df0c65c69f2e463f6f5796",
+                                "type": "string",
+                                "title": "Automation Id"
+                            }
+                        },
+                        "required": []
+                    },
+                    "layout": {},
+                    "dynamic": false,
+                    "type": "SCHEMA_AND_LAYOUT"
+                },
+                "blocks": {
+                    "b_QfZsP": {
+                        "component": {
+                            "componentType": "Card",
+                            "slots": {
+                                "header": {
+                                    "blockId": "b_x5lvk",
+                                    "wrappedInLayout": true
+                                },
+                                "body": {
+                                    "blockId": "b_fHazw",
+                                    "wrappedInLayout": true
+                                }
+                            },
+                            "appearance": {
+                                "showDivider": false,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-2xl"
+                                    },
+                                    "backgroundColor": "bg-primary",
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "borderColor": "border-tertiary",
+                                    "borderWidth": {
+                                        "custom": {
+                                            "r": "border-e-0",
+                                            "b": "border-b-0",
+                                            "t": "border-t",
+                                            "l": "border-s"
+                                        }
+                                    },
+                                    "gap": {
+                                        "all": "gap-xl"
+                                    },
+                                    "width": "w-full",
+                                    "height": "h-full"
+                                },
+                                "theme": "light"
+                            },
+                            "content": {
+                                "collapsible": {
+                                    "isInitiallyExpanded": true,
+                                    "enabled": false
+                                }
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Card_5",
+                        "dataSourceIds": [],
+                        "id": "b_QfZsP",
+                        "parentId": "b_p4RkV"
+                    },
+                    "b_JNaPB": {
+                        "component": {
+                            "componentType": "Card",
+                            "slots": {
+                                "body": {
+                                    "blockId": "b_YmyIr",
+                                    "wrappedInLayout": true
+                                }
+                            },
+                            "appearance": {
+                                "showDivider": true,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "backgroundColor": "bg-palette-success-25",
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "borderRadius": {
+                                        "all": "rounded-3xl"
+                                    },
+                                    "gap": {
+                                        "all": "gap-0"
+                                    },
+                                    "width": "w-full"
+                                },
+                                "theme": "light"
+                            },
+                            "content": {
+                                "collapsible": {
+                                    "isInitiallyExpanded": true,
+                                    "enabled": false
+                                }
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Card_9",
+                        "dataSourceIds": [],
+                        "id": "b_JNaPB",
+                        "parentId": "b_8hrcE"
+                    },
+                    "b_Tvral": {
+                        "component": {
+                            "componentType": "Card",
+                            "slots": {
+                                "body": {
+                                    "blockId": "b_xo7C5",
+                                    "wrappedInLayout": true
+                                }
+                            },
+                            "appearance": {
+                                "showDivider": true,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "backgroundColor": "bg-palette-success-25",
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "borderRadius": {
+                                        "all": "rounded-3xl"
+                                    },
+                                    "gap": {
+                                        "all": "gap-0"
+                                    },
+                                    "width": "w-full"
+                                },
+                                "theme": "light"
+                            },
+                            "content": {
+                                "collapsible": {
+                                    "isInitiallyExpanded": true,
+                                    "enabled": false
+                                }
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Card_6",
+                        "dataSourceIds": [],
+                        "id": "b_Tvral",
+                        "parentId": "b_fHazw"
+                    },
+                    "b_nrH79": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "center",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "l": "px-0"
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "flexWrap": "flex-nowrap",
+                                    "gap": {
+                                        "all": "gap-md"
+                                    },
+                                    "width": "w-full"
+                                },
+                                "theme": "light",
+                                "wrapContent": true,
+                                "justifyContent": "flex-start",
+                                "direction": "row"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_KUiSE",
+                                    "b_6Sn3t",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Header",
+                        "dataSourceIds": [],
+                        "id": "b_nrH79",
+                        "parentId": "b_L1h7g"
+                    },
+                    "b_YlvIx": {
+                        "component": {
+                            "componentType": "StatCard",
+                            "appearance": {
+                                "description": {
+                                    "color": "text-quaternary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "borderColor": "border-transparent",
+                                    "overflow": {
+                                        "all": "overflow-hidden"
+                                    },
+                                    "borderWidth": {
+                                        "all": "border-0"
+                                    },
+                                    "gap": {
+                                        "all": "gap-0"
+                                    },
+                                    "width": "w-fit"
+                                },
+                                "label": {
+                                    "truncate": true,
+                                    "color": "text-tertiary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "value": {
+                                    "color": "text-primary",
+                                    "variant": "text-xl",
+                                    "weight": "semi-bold"
+                                }
+                            },
+                            "content": {
+                                "decimalPlaces": 2,
+                                "notation": "standard",
+                                "addOns": {},
+                                "enableTrendColor": false,
+                                "style": "decimal",
+                                "thresholdValue": 0,
+                                "label": "Total Runs",
+                                "type": "NUMBER",
+                                "invertTrend": false,
+                                "value": "{{ __ua_workflows_data_source_21__['data']['objects'][0]['columns']['ID'] }}"
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "StatCard_4",
+                        "dataSourceIds": [
+                            "__ua_workflows_data_source_21__"
+                        ],
+                        "id": "b_YlvIx",
+                        "dP": [
+                            {
+                                "p": "content.value"
+                            }
+                        ],
+                        "parentId": "b_x5lvk"
+                    },
+                    "b_u7lnE": {
+                        "component": {
+                            "componentType": "StatCard",
+                            "appearance": {
+                                "description": {
+                                    "color": "text-quaternary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-hidden"
+                                    },
+                                    "borderRadius": {
+                                        "all": "rounded-none"
+                                    },
+                                    "borderWidth": {
+                                        "all": "border-0"
+                                    },
+                                    "gap": {
+                                        "all": "gap-0"
+                                    },
+                                    "width": "w-fit"
+                                },
+                                "label": {
+                                    "truncate": true,
+                                    "color": "text-tertiary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "value": {
+                                    "color": "text-primary",
+                                    "variant": "text-xl",
+                                    "weight": "semi-bold"
+                                }
+                            },
+                            "content": {
+                                "decimalPlaces": 2,
+                                "notation": "compact",
+                                "addOns": {},
+                                "enableTrendColor": false,
+                                "style": "decimal",
+                                "thresholdValue": 0,
+                                "label": "Failed",
+                                "type": "NUMBER",
+                                "invertTrend": false,
+                                "value": "{{ __ua_workflows_data_source_19__['data']['objects'][0]['columns']['ID'] }}"
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "StatCard_6",
+                        "dataSourceIds": [
+                            "__ua_workflows_data_source_19__"
+                        ],
+                        "id": "b_u7lnE",
+                        "dP": [
+                            {
+                                "p": "content.value"
+                            }
+                        ],
+                        "parentId": "b_ilRQg"
+                    },
+                    "b_6cv0Z": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "flex-start",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-lg"
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "flexWrap": "flex-nowrap",
+                                    "gap": {
+                                        "all": "gap-md"
+                                    }
+                                },
+                                "theme": "light",
+                                "wrapContent": true,
+                                "justifyContent": "flex-start",
+                                "direction": "column"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_HEBtV",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Body",
+                        "dataSourceIds": [],
+                        "id": "b_6cv0Z",
+                        "parentId": "b_b3nvk"
+                    },
+                    "b_7vToC": {
+                        "component": {
+                            "componentType": "StatCard",
+                            "appearance": {
+                                "description": {
+                                    "color": "text-quaternary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "borderColor": "border-tertiary",
+                                    "overflow": {
+                                        "all": "overflow-hidden"
+                                    },
+                                    "borderRadius": {
+                                        "all": "rounded-md"
+                                    },
+                                    "borderWidth": {
+                                        "all": "border-0"
+                                    },
+                                    "width": "w-fit"
+                                },
+                                "label": {
+                                    "truncate": true,
+                                    "color": "text-tertiary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "value": {
+                                    "color": "text-primary",
+                                    "variant": "text-xl",
+                                    "weight": "semi-bold"
+                                }
+                            },
+                            "content": {
+                                "decimalPlaces": 2,
+                                "notation": "compact",
+                                "addOns": {},
+                                "enableTrendColor": false,
+                                "style": "decimal",
+                                "thresholdValue": 0,
+                                "label": "Successful",
+                                "type": "NUMBER",
+                                "invertTrend": false,
+                                "value": "{{ __ua_workflows_data_source_20__['data']['objects'][0]['columns']['ID'] }}"
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "StatCard_5",
+                        "dataSourceIds": [
+                            "__ua_workflows_data_source_20__"
+                        ],
+                        "id": "b_7vToC",
+                        "dP": [
+                            {
+                                "p": "content.value"
+                            }
+                        ],
+                        "parentId": "b_xo7C5"
+                    },
+                    "b_ilRQg": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "flex-start",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-lg"
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "flexWrap": "flex-nowrap",
+                                    "gap": {
+                                        "all": "gap-md"
+                                    }
+                                },
+                                "theme": "light",
+                                "wrapContent": true,
+                                "justifyContent": "flex-start",
+                                "direction": "column"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_u7lnE",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Body",
+                        "dataSourceIds": [],
+                        "id": "b_ilRQg",
+                        "parentId": "b_xmZ9Q"
+                    },
+                    "b_3S4xG": {
+                        "component": {
+                            "componentType": "Filters",
+                            "appearance": {},
+                            "content": {
+                                "primaryActions": [
+                                    {
+                                        "enablePresets": true,
+                                        "appearance": {
+                                            "visibility": {
+                                                "value": true
+                                            }
+                                        },
+                                        "variant": "date-range",
+                                        "id": "gfItem_LSShr",
+                                        "label": "Date Filter",
+                                        "type": "date",
+                                        "initialValue": {
+                                            "preset": "last7days"
+                                        }
+                                    }
+                                ],
+                                "dataSourceIds": []
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Filters_1",
+                        "dataSourceIds": [],
+                        "id": "b_3S4xG",
+                        "parentId": "b_EQFyj"
+                    },
+                    "b_L1h7g": {
+                        "component": {
+                            "componentType": "Card",
+                            "slots": {
+                                "header": {
+                                    "blockId": "b_nrH79",
+                                    "wrappedInLayout": true
+                                },
+                                "body": {
+                                    "blockId": "b_8hrcE",
+                                    "wrappedInLayout": true
+                                }
+                            },
+                            "appearance": {
+                                "showDivider": false,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-2xl"
+                                    },
+                                    "backgroundColor": "bg-primary",
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "borderColor": "border-tertiary",
+                                    "borderWidth": {
+                                        "custom": {
+                                            "r": "border-e",
+                                            "b": "border-b-0",
+                                            "t": "border-t",
+                                            "l": "border-s"
+                                        }
+                                    },
+                                    "gap": {
+                                        "all": "gap-lg"
+                                    },
+                                    "width": "w-full",
+                                    "height": "h-full"
+                                },
+                                "theme": "light"
+                            },
+                            "content": {
+                                "collapsible": {
+                                    "isInitiallyExpanded": true,
+                                    "enabled": false
+                                }
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Card_8",
+                        "dataSourceIds": [],
+                        "id": "b_L1h7g",
+                        "parentId": "b_p4RkV"
+                    },
+                    "b_x5lvk": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "center",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "l": "px-0"
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "flexWrap": "flex-nowrap",
+                                    "gap": {
+                                        "all": "gap-md"
+                                    },
+                                    "width": "w-full"
+                                },
+                                "theme": "light",
+                                "wrapContent": true,
+                                "justifyContent": "flex-start",
+                                "direction": "row"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_2T2Cb",
+                                    "b_YlvIx",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Header",
+                        "dataSourceIds": [],
+                        "id": "b_x5lvk",
+                        "parentId": "b_QfZsP"
+                    },
+                    "b_2T2Cb": {
+                        "component": {
+                            "componentType": "Icon",
+                            "appearance": {
+                                "featured": {
+                                    "color": "white"
+                                },
+                                "size": "lg",
+                                "variant": "featured",
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "borderRadius": {
+                                        "all": "rounded-md"
+                                    }
+                                },
+                                "transparent": {
+                                    "color": "text-primary"
+                                }
+                            },
+                            "content": {
+                                "icon": "Zap"
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Icon_2",
+                        "dataSourceIds": [],
+                        "id": "b_2T2Cb",
+                        "parentId": "b_x5lvk"
+                    },
+                    "b_xnaDN": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "stretch",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "gap": {
+                                        "all": "gap-0"
+                                    }
+                                },
+                                "theme": "light",
+                                "wrapContent": true,
+                                "justifyContent": "flex-start",
+                                "direction": "column"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_p4RkV",
+                                    "b_4utFK",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Stack_17",
+                        "dataSourceIds": [],
+                        "id": "b_xnaDN",
+                        "parentId": "root_id"
+                    },
+                    "b_xo7C5": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "flex-start",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-lg"
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "flexWrap": "flex-nowrap",
+                                    "gap": {
+                                        "all": "gap-md"
+                                    }
+                                },
+                                "theme": "light",
+                                "wrapContent": true,
+                                "justifyContent": "flex-start",
+                                "direction": "column"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_7vToC",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Body",
+                        "dataSourceIds": [],
+                        "id": "b_xo7C5",
+                        "parentId": "b_Tvral"
+                    },
+                    "root_id": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "stretch",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "custom": {
+                                            "r": "pe-2xl",
+                                            "b": "pb-xl",
+                                            "t": "pt-0",
+                                            "l": "ps-2xl"
+                                        }
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "flexWrap": "flex-nowrap",
+                                    "gap": {
+                                        "all": "gap-md"
+                                    },
+                                    "width": "w-full",
+                                    "height": "h-full"
+                                },
+                                "wrapContent": true,
+                                "justifyContent": "flex-start",
+                                "direction": "column"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_xnaDN",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "dataSourceIds": [],
+                        "id": "root_id"
+                    },
+                    "b_33hHZ": {
+                        "component": {
+                            "componentType": "StatCard",
+                            "appearance": {
+                                "description": {
+                                    "color": "text-quaternary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-hidden"
+                                    },
+                                    "borderRadius": {
+                                        "all": "rounded-none"
+                                    },
+                                    "borderWidth": {
+                                        "all": "border-0"
+                                    },
+                                    "gap": {
+                                        "all": "gap-0"
+                                    },
+                                    "width": "w-fit"
+                                },
+                                "label": {
+                                    "truncate": true,
+                                    "color": "text-tertiary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "value": {
+                                    "color": "text-primary",
+                                    "variant": "text-xl",
+                                    "weight": "semi-bold"
+                                }
+                            },
+                            "content": {
+                                "decimalPlaces": 2,
+                                "notation": "standard",
+                                "addOns": {},
+                                "enableTrendColor": false,
+                                "style": "decimal",
+                                "thresholdValue": 0,
+                                "label": "Successful",
+                                "type": "TIME",
+                                "invertTrend": false,
+                                "value": "{{ __ua_workflows_data_source_17__['data']['objects'][0]['columns']['EXECUTION_TIME'] }}"
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "StatCard_8",
+                        "dataSourceIds": [
+                            "__ua_workflows_data_source_17__"
+                        ],
+                        "id": "b_33hHZ",
+                        "dP": [
+                            {
+                                "p": "content.value"
+                            }
+                        ],
+                        "parentId": "b_YmyIr"
+                    },
+                    "b_fHazw": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "flex-start",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "flexWrap": "flex-nowrap",
+                                    "gap": {
+                                        "all": "gap-xl"
+                                    }
+                                },
+                                "theme": "light",
+                                "wrapContent": true,
+                                "justifyContent": "space-between",
+                                "direction": "row"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_Tvral",
+                                    "b_xmZ9Q",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Body",
+                        "dataSourceIds": [],
+                        "id": "b_fHazw",
+                        "parentId": "b_QfZsP"
+                    },
+                    "b_8hrcE": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "flex-start",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "flexWrap": "flex-nowrap",
+                                    "gap": {
+                                        "all": "gap-xl"
+                                    }
+                                },
+                                "theme": "light",
+                                "wrapContent": true,
+                                "justifyContent": "space-between",
+                                "direction": "row"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_JNaPB",
+                                    "b_b3nvk",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Body",
+                        "dataSourceIds": [],
+                        "id": "b_8hrcE",
+                        "parentId": "b_L1h7g"
+                    },
+                    "b_N3rYi": {
+                        "component": {
+                            "componentType": "Chart",
+                            "appearance": {
+                                "barWidth": {
+                                    "0": "m",
+                                    "1": "d",
+                                    "value": "md"
+                                },
+                                "showLegends": true,
+                                "showPointMarkers": false,
+                                "yAxis": {
+                                    "showGridLines": true,
+                                    "showTicks": true,
+                                    "showAxisLine": false
+                                },
+                                "xAxis": {
+                                    "showGridLines": false,
+                                    "showTicks": true,
+                                    "showAxisLine": true,
+                                    "labelsOrientation": "horizontal"
+                                },
+                                "stacked": false,
+                                "styles": {
+                                    "minHeight": {
+                                        "custom": "100%"
+                                    },
+                                    "padding": {
+                                        "all": "p-lg"
+                                    },
+                                    "width": "w-full",
+                                    "height": {
+                                        "custom": "300px"
+                                    }
+                                },
+                                "chartColours": {
+                                    "colourBy": "SERIES",
+                                    "colourMapping": {
+                                        "COMPLETED": "var(--palette-brand-500)",
+                                        "FAILED": "var(--palette-error-600)",
+                                        "units": "var(--palette-brand-600)"
+                                    }
+                                }
+                            },
+                            "content": {
+                                "summary": {
+                                    "items": []
+                                },
+                                "showLegends": true,
+                                "yAxis": {
+                                    "tickLabels": {
+                                        "notation": "compact",
+                                        "enabled": true
+                                    },
+                                    "series": [
+                                        {
+                                            "dataLabels": {
+                                                "enabled": true
+                                            },
+                                            "id": "series1",
+                                            "value": {
+                                                "path": "columns.ID",
+                                                "originalKey": "ID",
+                                                "originalPath": "columns.ID",
+                                                "key": "ID"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "xAxis": {
+                                    "tickLabels": {
+                                        "format": "dd MMMM",
+                                        "enabled": true
+                                    },
+                                    "endValue": {
+                                        "path": "columns.EXECUTION_TIME_DAY_OF_WEEK",
+                                        "originalKey": "EXECUTION_TIME_DAY_OF_WEEK",
+                                        "originalPath": "columns.EXECUTION_TIME_DAY_OF_WEEK",
+                                        "key": "EXECUTION_TIME_DAY_OF_WEEK"
+                                    },
+                                    "xAxisValue": {
+                                        "path": "columns.EXECUTION_TIME_DATE",
+                                        "originalKey": "EXECUTION_TIME_DATE",
+                                        "originalPath": "columns.EXECUTION_TIME_DATE",
+                                        "key": "EXECUTION_TIME_DATE"
+                                    },
+                                    "scale": "linear",
+                                    "groupBy": {
+                                        "path": "columns.$LOOKUP$__ua_workflows_data_source_18__$$WORKFLOW_EXECUTION_STATUS$$objects_$_$columns$STATUS.name",
+                                        "originalKey": "STATUS",
+                                        "originalPath": "columns.STATUS",
+                                        "key": "name"
+                                    },
+                                    "plotPeriodicValues": false
+                                },
+                                "data": "{{ __ua_workflows_data_source_18__['data']['objects'] }}",
+                                "yAxisRight": {
+                                    "series": []
+                                },
+                                "chartType": "COLUMN"
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Chart_2",
+                        "dataSourceIds": [
+                            "__ua_workflows_data_source_18__"
+                        ],
+                        "id": "b_N3rYi",
+                        "dP": [
+                            {
+                                "p": "content.data"
+                            }
+                        ],
+                        "parentId": "b_RjPji",
+                        "events": []
+                    },
+                    "b_4utFK": {
+                        "component": {
+                            "componentType": "Container",
+                            "appearance": {
+                                "variant": "1",
+                                "styles": {
+                                    "layout": "flex-grow",
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "gap": {
+                                        "all": "gap-lg"
+                                    }
+                                },
+                                "theme": "light"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_RjPji"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Container_2",
+                        "dataSourceIds": [],
+                        "id": "b_4utFK",
+                        "parentId": "b_xnaDN"
+                    },
+                    "b_YmyIr": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "flex-start",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-lg"
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "flexWrap": "flex-nowrap",
+                                    "gap": {
+                                        "all": "gap-md"
+                                    }
+                                },
+                                "theme": "light",
+                                "wrapContent": true,
+                                "justifyContent": "flex-start",
+                                "direction": "column"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_33hHZ",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Body",
+                        "dataSourceIds": [],
+                        "id": "b_YmyIr",
+                        "parentId": "b_JNaPB"
+                    },
+                    "b_b3nvk": {
+                        "component": {
+                            "componentType": "Card",
+                            "slots": {
+                                "body": {
+                                    "blockId": "b_6cv0Z",
+                                    "wrappedInLayout": true
+                                }
+                            },
+                            "appearance": {
+                                "showDivider": true,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "backgroundColor": "bg-palette-error-25",
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "borderRadius": {
+                                        "all": "rounded-3xl"
+                                    },
+                                    "borderWidth": {
+                                        "custom": {
+                                            "r": "border-e-0",
+                                            "b": "border-b-0",
+                                            "t": "border-t-0",
+                                            "l": "border-s-0"
+                                        }
+                                    },
+                                    "gap": {
+                                        "all": "gap-0"
+                                    },
+                                    "width": "w-full"
+                                },
+                                "theme": "light"
+                            },
+                            "content": {
+                                "collapsible": {
+                                    "isInitiallyExpanded": true,
+                                    "enabled": false
+                                }
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Card_10",
+                        "dataSourceIds": [],
+                        "id": "b_b3nvk",
+                        "parentId": "b_8hrcE"
+                    },
+                    "b_6Sn3t": {
+                        "component": {
+                            "componentType": "StatCard",
+                            "appearance": {
+                                "description": {
+                                    "color": "text-quaternary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "borderColor": "border-tertiary",
+                                    "overflow": {
+                                        "all": "overflow-hidden"
+                                    },
+                                    "borderRadius": {
+                                        "all": "rounded-md"
+                                    },
+                                    "borderWidth": {
+                                        "all": "border-0"
+                                    },
+                                    "width": "w-fit"
+                                },
+                                "label": {
+                                    "truncate": true,
+                                    "color": "text-tertiary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "value": {
+                                    "color": "text-primary",
+                                    "variant": "text-xl",
+                                    "weight": "semi-bold"
+                                }
+                            },
+                            "content": {
+                                "decimalPlaces": 2,
+                                "notation": "standard",
+                                "addOns": {},
+                                "enableTrendColor": false,
+                                "style": "decimal",
+                                "thresholdValue": 0,
+                                "label": "Average Runtime",
+                                "type": "TIME",
+                                "invertTrend": false,
+                                "value": "{{ __ua_workflows_data_source_15__['data']['objects'][0]['columns']['EXECUTION_TIME'] }}"
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "StatCard_7",
+                        "dataSourceIds": [
+                            "__ua_workflows_data_source_15__"
+                        ],
+                        "id": "b_6Sn3t",
+                        "dP": [
+                            {
+                                "p": "content.value"
+                            }
+                        ],
+                        "parentId": "b_nrH79"
+                    },
+                    "b_xmZ9Q": {
+                        "component": {
+                            "componentType": "Card",
+                            "slots": {
+                                "body": {
+                                    "blockId": "b_ilRQg",
+                                    "wrappedInLayout": true
+                                }
+                            },
+                            "appearance": {
+                                "showDivider": true,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "backgroundColor": "bg-palette-error-25",
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "borderRadius": {
+                                        "all": "rounded-3xl"
+                                    },
+                                    "gap": {
+                                        "all": "gap-0"
+                                    },
+                                    "width": "w-full"
+                                },
+                                "theme": "light"
+                            },
+                            "content": {
+                                "collapsible": {
+                                    "isInitiallyExpanded": true,
+                                    "enabled": false
+                                }
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Card_7",
+                        "dataSourceIds": [],
+                        "id": "b_xmZ9Q",
+                        "parentId": "b_fHazw"
+                    },
+                    "b_RjPji": {
+                        "component": {
+                            "componentType": "Card",
+                            "slots": {
+                                "header": {
+                                    "blockId": "b_QJ7Ks"
+                                },
+                                "body": {
+                                    "blockId": "b_N3rYi"
+                                }
+                            },
+                            "appearance": {
+                                "styles": {
+                                    "padding": {
+                                        "custom": {
+                                            "r": "pe-4xl",
+                                            "b": "pb-4xl",
+                                            "t": "pt-3xl",
+                                            "l": "ps-4xl"
+                                        }
+                                    },
+                                    "backgroundColor": "bg-primary",
+                                    "borderColor": "border-tertiary",
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "borderWidth": {
+                                        "all": "border"
+                                    },
+                                    "gap": {
+                                        "all": "gap-xxs"
+                                    }
+                                },
+                                "theme": "light"
+                            },
+                            "content": {
+                                "collapsible": {
+                                    "isInitiallyExpanded": true,
+                                    "enabled": false
+                                }
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Card_11",
+                        "dataSourceIds": [],
+                        "id": "b_RjPji",
+                        "parentId": "b_4utFK"
+                    },
+                    "b_KUiSE": {
+                        "component": {
+                            "componentType": "Icon",
+                            "appearance": {
+                                "featured": {
+                                    "color": "white"
+                                },
+                                "size": "lg",
+                                "variant": "featured",
+                                "transparent": {
+                                    "color": "text-primary"
+                                }
+                            },
+                            "content": {
+                                "icon": "Clock"
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Icon_3",
+                        "dataSourceIds": [],
+                        "id": "b_KUiSE",
+                        "parentId": "b_nrH79"
+                    },
+                    "b_HEBtV": {
+                        "component": {
+                            "componentType": "StatCard",
+                            "appearance": {
+                                "description": {
+                                    "color": "text-quaternary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-hidden"
+                                    },
+                                    "borderRadius": {
+                                        "all": "rounded-md"
+                                    },
+                                    "borderWidth": {
+                                        "all": "border-0"
+                                    },
+                                    "gap": {
+                                        "all": "gap-0"
+                                    },
+                                    "width": "w-fit"
+                                },
+                                "label": {
+                                    "truncate": true,
+                                    "color": "text-tertiary",
+                                    "variant": "text-sm",
+                                    "weight": "regular"
+                                },
+                                "value": {
+                                    "color": "text-primary",
+                                    "variant": "text-xl",
+                                    "weight": "semi-bold"
+                                }
+                            },
+                            "content": {
+                                "decimalPlaces": 2,
+                                "notation": "standard",
+                                "addOns": {},
+                                "enableTrendColor": false,
+                                "style": "decimal",
+                                "thresholdValue": 0,
+                                "label": "Failed",
+                                "type": "TIME",
+                                "invertTrend": false,
+                                "value": "{{ __ua_workflows_data_source_16__['data']['objects'][0]['columns']['EXECUTION_TIME'] }}"
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "StatCard_9",
+                        "dataSourceIds": [
+                            "__ua_workflows_data_source_16__"
+                        ],
+                        "id": "b_HEBtV",
+                        "dP": [
+                            {
+                                "p": "content.value"
+                            }
+                        ],
+                        "parentId": "b_6cv0Z"
+                    },
+                    "b_p4RkV": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "center",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "all": "p-0"
+                                    },
+                                    "margin": {
+                                        "all": "m-0"
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "flexWrap": "flex-nowrap",
+                                    "gap": {
+                                        "all": "gap-0"
+                                    },
+                                    "width": "w-full"
+                                },
+                                "theme": "light",
+                                "wrapContent": true,
+                                "justifyContent": "flex-start",
+                                "direction": "row"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_QfZsP",
+                                    "b_L1h7g",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Stack_4",
+                        "dataSourceIds": [],
+                        "id": "b_p4RkV",
+                        "parentId": "b_xnaDN"
+                    },
+                    "b_EQFyj": {
+                        "component": {
+                            "componentType": "Stack",
+                            "appearance": {
+                                "alignItems": "stretch",
+                                "reverseOrder": false,
+                                "styles": {
+                                    "padding": {
+                                        "custom": {
+                                            "r": "pe-2xl",
+                                            "b": "pb-0",
+                                            "t": "pt-0",
+                                            "l": "ps-2xl"
+                                        }
+                                    },
+                                    "margin": {
+                                        "custom": {
+                                            "r": "me-0",
+                                            "b": "mb-lg",
+                                            "t": "mt-xl",
+                                            "l": "ms-0"
+                                        }
+                                    },
+                                    "overflow": {
+                                        "all": "overflow-visible"
+                                    },
+                                    "gap": {
+                                        "all": "gap-md"
+                                    },
+                                    "width": "w-full"
+                                },
+                                "theme": "light",
+                                "wrapContent": true,
+                                "justifyContent": "flex-start",
+                                "direction": "column"
+                            },
+                            "content": {
+                                "blockIds": [
+                                    "b_3S4xG",
+                                    "__PLACEHOLDER__"
+                                ]
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Stack_3",
+                        "dataSourceIds": [],
+                        "id": "b_EQFyj"
+                    },
+                    "b_QJ7Ks": {
+                        "component": {
+                            "componentType": "Typography",
+                            "appearance": {
+                                "color": "text-primary",
+                                "variant": "text-xl",
+                                "weight": "semi-bold"
+                            },
+                            "content": {
+                                "type": "PLAIN_TEXT",
+                                "value": "Automation Runs over time "
+                            }
+                        },
+                        "visibility": {
+                            "value": true
+                        },
+                        "dpOn": [],
+                        "displayName": "Typography_2",
+                        "dataSourceIds": [],
+                        "id": "b_QJ7Ks",
+                        "parentId": "b_RjPji"
+                    }
+                },
+                "name": "UnifyApps Workflow insights",
+                "flags": {
+                    "enablePagePubSubReactivity": true,
+                    "shouldUseBuiltDependencies": true
+                },
+                "interfaceId": "ua-workflows",
+                "dataSources": {},
+                "slug": "ua-workflow-insights",
+                "pageVariables": {}
+            },
+            "standard": false,
+            "version": 673
+        }
+    ],
+    "type": "HITS"
+}
