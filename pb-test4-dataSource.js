@@ -76,34 +76,53 @@ async function fetchDataSources(pageUrl) {
 
   try {
     const headers = await getHeaders(pageUrl, interfaceId);
-    const response = await fetch('https://a.qa.unifyapps.com/api/entity/e_data_source', {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        filter: {
-          field: "properties.interfacePageId",
-          op: "EQUAL",
-          values: [interfacePageId]
-        },
-        page: {
-          limit: 100,
-          offset: 0
-        }
-      })
-    });
+    let allDataSources = [];
+    let hasMorePages = true;
+    let currentPage = 0;
+    const pageSize = 100;
 
-    if (!response.ok) {
-      throw new Error(`HTTP error for ${interfaceId}! status: ${response.status}`);
+    while (hasMorePages) {
+      const response = await fetch('https://a.qa.unifyapps.com/api/entity/e_data_source', {
+        method: 'POST',
+        headers,                body: JSON.stringify({
+                    filter: {
+                        field: "properties.interfacePageId",
+                        op: "EQUAL",
+                        values: [interfacePageId]
+                    },
+          sorts: [{
+            field: "properties.name",
+            order: "ASC"
+          }],
+          page: {
+            limit: pageSize,
+            offset: currentPage * pageSize
+          }
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error for ${interfaceId}! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      
+      if (data.objects && Array.isArray(data.objects)) {
+        allDataSources = allDataSources.concat(data.objects);
+      }
+
+      // Check if we've received fewer items than the page size
+      hasMorePages = data.objects && data.objects.length === pageSize;
+      currentPage++;
     }
 
-    const data = await response.json();
     await fs.mkdir('samples', { recursive: true });
 
-    // Save data sources
-    if (data.objects && Array.isArray(data.objects)) {
+    // Save all data sources
+    if (allDataSources.length > 0) {
       const fileName = `samples/sample_e_data_source_${interfaceId}.json`;
-      await fs.writeFile(fileName, JSON.stringify(data.objects, null, 2));
-      console.log(`Saved ${data.objects.length} data sources for ${interfaceId} to ${fileName}`);
+      await fs.writeFile(fileName, JSON.stringify(allDataSources, null, 2));
+      console.log(`Saved ${allDataSources.length} data sources for ${interfaceId} to ${fileName}`);
     }
 
     // Save metadata
@@ -112,12 +131,12 @@ async function fetchDataSources(pageUrl) {
       interfaceId,
       interfacePageId,
       pageUrl,
-      totalDataSources: data.objects ? data.objects.length : 0,
-      cursor: data.cursor || null
+      totalDataSources: allDataSources.length,
+      pagesProcessed: currentPage
     };
     await fs.writeFile(`samples/captured_data_sources_${interfaceId}.json`, JSON.stringify(metadata, null, 2));
 
-    console.log(`Capture complete for ${interfaceId}: ${metadata.totalDataSources} data sources`);
+    console.log(`Capture complete for ${interfaceId}: ${metadata.totalDataSources} data sources from ${currentPage} pages`);
     return metadata;
   } catch (error) {
     console.error(`Error fetching data sources for ${interfaceId}:`, error.message);

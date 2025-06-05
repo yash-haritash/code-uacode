@@ -1,0 +1,1440 @@
+[
+  {
+    "createdTime": 1727792453669,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046724984,
+      "deployedBy": -1,
+      "entityVersion": 655,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_48__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046724986,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "EXECUTION_TIME",
+            "includePercentageChange": false,
+            "aggregationFunction": "AVG"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "Avg exc time ",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[0].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 655
+  },
+  {
+    "createdTime": 1727792453843,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046725044,
+      "deployedBy": -1,
+      "entityVersion": 658,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_15__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046725045,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "EXECUTION_TIME",
+            "includePercentageChange": false,
+            "aggregationFunction": "AVG"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "Avg exc time ",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[0].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 658
+  },
+  {
+    "createdTime": 1727792453841,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046725035,
+      "deployedBy": -1,
+      "entityVersion": 658,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_16__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046725037,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "EXECUTION_TIME",
+            "includePercentageChange": false,
+            "aggregationFunction": "AVG"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "FAILED",
+                "operator": "EQUAL"
+              },
+              "property": "STATUS"
+            },
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "Avg exc time for failed runs",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[1].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 658
+  },
+  {
+    "createdTime": 1727792453662,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046724977,
+      "deployedBy": -1,
+      "entityVersion": 655,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_49__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046724979,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "EXECUTION_TIME",
+            "includePercentageChange": false,
+            "aggregationFunction": "AVG"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "FAILED",
+                "operator": "EQUAL"
+              },
+              "property": "STATUS"
+            },
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "Avg exc time for failed runs",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[1].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 655
+  },
+  {
+    "createdTime": 1727792453651,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046724970,
+      "deployedBy": -1,
+      "entityVersion": 655,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_50__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046724972,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "EXECUTION_TIME",
+            "includePercentageChange": false,
+            "aggregationFunction": "AVG"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "COMPLETED",
+                "operator": "EQUAL"
+              },
+              "property": "STATUS"
+            },
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "Avg exc time for successful runs",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[1].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 655
+  },
+  {
+    "createdTime": 1727792453837,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046725028,
+      "deployedBy": -1,
+      "entityVersion": 658,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_17__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046725029,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "EXECUTION_TIME",
+            "includePercentageChange": false,
+            "aggregationFunction": "AVG"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "COMPLETED",
+                "operator": "EQUAL"
+              },
+              "property": "STATUS"
+            },
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "Avg exc time for successful runs",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[1].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 658
+  },
+  {
+    "createdTime": 1727792453646,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046724962,
+      "deployedBy": -1,
+      "entityVersion": 655,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_51__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046724964,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "EXECUTION_TIME_DATE",
+            "includePercentageChange": false,
+            "aggregationFunction": "GROUP"
+          },
+          {
+            "name": "ID",
+            "includePercentageChange": false,
+            "aggregationFunction": "COUNT"
+          },
+          {
+            "name": "STATUS",
+            "includePercentageChange": false,
+            "aggregationFunction": "GROUP"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            },
+            {
+              "filters": [
+                {
+                  "filter": {
+                    "value": "COMPLETED",
+                    "operator": "EQUAL"
+                  },
+                  "property": "STATUS"
+                },
+                {
+                  "filter": {
+                    "value": "FAILED",
+                    "operator": "EQUAL"
+                  },
+                  "property": "STATUS"
+                }
+              ],
+              "operator": "OR"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "sorts": [
+          {
+            "field": "EXECUTION_TIME_DATE",
+            "order": "ASC"
+          }
+        ],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "RUN OVER TIME",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[0].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 655
+  },
+  {
+    "createdTime": 1727792453834,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046725020,
+      "deployedBy": -1,
+      "entityVersion": 658,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_18__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046725022,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "EXECUTION_TIME_DATE",
+            "includePercentageChange": false,
+            "aggregationFunction": "GROUP"
+          },
+          {
+            "name": "ID",
+            "includePercentageChange": false,
+            "aggregationFunction": "COUNT"
+          },
+          {
+            "name": "STATUS",
+            "includePercentageChange": false,
+            "aggregationFunction": "GROUP"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            },
+            {
+              "filters": [
+                {
+                  "filter": {
+                    "value": "COMPLETED",
+                    "operator": "EQUAL"
+                  },
+                  "property": "STATUS"
+                },
+                {
+                  "filter": {
+                    "value": "FAILED",
+                    "operator": "EQUAL"
+                  },
+                  "property": "STATUS"
+                }
+              ],
+              "operator": "OR"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "sorts": [
+          {
+            "field": "EXECUTION_TIME_DATE",
+            "order": "ASC"
+          }
+        ],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "RUN OVER TIME",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[0].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 658
+  },
+  {
+    "createdTime": 1727792453642,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046724955,
+      "deployedBy": -1,
+      "entityVersion": 655,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_52__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046724956,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "ID",
+            "includePercentageChange": false,
+            "aggregationFunction": "DISTINCT_COUNT"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            },
+            {
+              "filter": {
+                "value": "FAILED",
+                "operator": "EQUAL"
+              },
+              "property": "STATUS"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "failed runs",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[0].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 655
+  },
+  {
+    "createdTime": 1727792453831,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046725013,
+      "deployedBy": -1,
+      "entityVersion": 658,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_19__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046725015,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "ID",
+            "includePercentageChange": false,
+            "aggregationFunction": "DISTINCT_COUNT"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            },
+            {
+              "filter": {
+                "value": "FAILED",
+                "operator": "EQUAL"
+              },
+              "property": "STATUS"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "failed runs",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[0].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 658
+  },
+  {
+    "createdTime": 1727792453639,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046724947,
+      "deployedBy": -1,
+      "entityVersion": 655,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_53__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046724949,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "ID",
+            "includePercentageChange": false,
+            "aggregationFunction": "DISTINCT_COUNT"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            },
+            {
+              "filter": {
+                "value": "COMPLETED",
+                "operator": "EQUAL"
+              },
+              "property": "STATUS"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "successful runs",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[0].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 655
+  },
+  {
+    "createdTime": 1727792453826,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046724999,
+      "deployedBy": -1,
+      "entityVersion": 658,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_20__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046725001,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "ID",
+            "includePercentageChange": false,
+            "aggregationFunction": "DISTINCT_COUNT"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            },
+            {
+              "filter": {
+                "value": "COMPLETED",
+                "operator": "EQUAL"
+              },
+              "property": "STATUS"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "successful runs",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[0].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 658
+  },
+  {
+    "createdTime": 1727792453634,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046724925,
+      "deployedBy": -1,
+      "entityVersion": 655,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_54__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046724937,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "ID",
+            "includePercentageChange": false,
+            "aggregationFunction": "DISTINCT_COUNT"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "total runs",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[0].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 655
+  },
+  {
+    "createdTime": 1727792453822,
+    "deleted": false,
+    "deploymentState": {
+      "deployedAt": 1749046724992,
+      "deployedBy": -1,
+      "entityVersion": 658,
+      "version": 600
+    },
+    "entityType": "e_data_source",
+    "id": "__ua_workflows_data_source_21__",
+    "lastModifiedBy": -1,
+    "modifiedTime": 1749046724994,
+    "ownerUserId": 0,
+    "properties": {
+      "dpOn": [
+        {
+          "p": [
+            "pageInputs['automationId']"
+          ],
+          "id": "pageInputs"
+        },
+        {
+          "p": [
+            "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+            "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+            "b_3S4xG['state']['dateTimeFilter']['endTime']",
+            "b_3S4xG['state']['dateTimeFilter']['startTime']"
+          ],
+          "id": "b_3S4xG"
+        }
+      ],
+      "inputs": {
+        "projections": [
+          {
+            "name": "ID",
+            "includePercentageChange": false,
+            "aggregationFunction": "DISTINCT_COUNT"
+          }
+        ],
+        "filter": {
+          "filters": [
+            {
+              "filter": {
+                "value": "{{ pageInputs['automationId'] }}",
+                "operator": "EQUAL"
+              },
+              "property": "WORKFLOW_ID"
+            }
+          ],
+          "operator": "AND"
+        },
+        "searchField": {
+          "fields": []
+        },
+        "entityType": "WORKFLOW_EXECUTION",
+        "includeTotalHits": true,
+        "sorts": [],
+        "timeFilter": {
+          "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+          "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+          "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+          "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+        },
+        "group": "PLATFORM"
+      },
+      "name": "total runs",
+      "context": {
+        "appName": "analytics_by_unifyapps",
+        "resourceName": "analytics_by_unifyapps_query_reports"
+      },
+      "type": "APPLICATION",
+      "dp": [
+        {
+          "p": "inputs.filter.filters[0].filter.value"
+        },
+        {
+          "p": "inputs.timeFilter.previousSince"
+        },
+        {
+          "p": "inputs.timeFilter.previousUntil"
+        },
+        {
+          "p": "inputs.timeFilter.until"
+        },
+        {
+          "p": "inputs.timeFilter.since"
+        }
+      ],
+      "interfacePageId": "ua_workflow_insights"
+    },
+    "standard": false,
+    "version": 658
+  }
+]
