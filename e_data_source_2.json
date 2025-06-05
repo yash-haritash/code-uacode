@@ -1,0 +1,1668 @@
+{
+  "cursor": {
+    "previous": "eyJmaWx0ZXIiOnsiZmllbGQiOiJpZCIsIm9wIjoiR1QiLCJ2YWx1ZXMiOlsiZV82N2I0OGQwYzkwNmY5NTBlM2Q4OWQ1YWYiXX0sInJldmVyc2UiOnRydWV9"
+  },
+  "hasMore": false,
+  "objects": [
+    {
+      "createdTime": 1739885836513,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725062,
+        "deployedBy": -1,
+        "entityVersion": 18,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b48d0c906f950e3d89d5af",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725063,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "ID",
+              "includePercentageChange": false,
+              "aggregationFunction": "DISTINCT_COUNT"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "advancedOptions": {
+          "runBehaviour": "automatic"
+        },
+        "name": "total runs (Copy)",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 18
+    },
+    {
+      "createdTime": 1739883715936,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725070,
+        "deployedBy": -1,
+        "entityVersion": 21,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b484c3a2108f13598de4e8",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725071,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "ID",
+              "includePercentageChange": false,
+              "aggregationFunction": "GROUP"
+            },
+            {
+              "name": "EXECUTION_TIME",
+              "includePercentageChange": false,
+              "aggregationFunction": "GROUP"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              },
+              {
+                "filter": {
+                  "value": "1000",
+                  "operator": "GT"
+                },
+                "property": "EXECUTION_TIME"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "advancedOptions": {
+          "runBehaviour": "automatic"
+        },
+        "name": "total runs over 1 sec",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 21
+    },
+    {
+      "createdTime": 1739882968921,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725077,
+        "deployedBy": -1,
+        "entityVersion": 25,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b481d8a2108f13598de30a",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725079,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['epoch']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['epoch']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['epoch']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['epoch']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "advancedOptions": {
+          "refetchOnWindowFocus": true,
+          "timing": {
+            "runQueryOnPageLoad": false,
+            "runQueryPeriodically": false
+          },
+          "runBehaviour": "automatic"
+        },
+        "inputs": {
+          "projections": [
+            {
+              "name": "CURRENT_NODE_APP_NAME",
+              "includePercentageChange": false,
+              "aggregationFunction": "GROUP"
+            },
+            {
+              "name": "EXECUTION_TIME",
+              "includePercentageChange": false,
+              "aggregationFunction": "AVG"
+            },
+            {
+              "name": "EXECUTION_INSTANCE_ID",
+              "includePercentageChange": false,
+              "alias": "Count",
+              "aggregationFunction": "COUNT"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_NODE_EXECUTION",
+          "sorts": [
+            {
+              "field": "EXECUTION_TIME",
+              "order": "DESC"
+            }
+          ],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['epoch']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['epoch']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['epoch']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['epoch']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "name": "Table",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceVersion": 300,
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 25
+    },
+    {
+      "createdTime": 1739882379277,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725084,
+        "deployedBy": -1,
+        "entityVersion": 18,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de170",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725086,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "EXECUTION_TIME",
+              "includePercentageChange": false,
+              "aggregationFunction": "AVG"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "advancedOptions": {
+          "runBehaviour": "automatic"
+        },
+        "name": "Avg exc time ",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 18
+    },
+    {
+      "createdTime": 1739882379271,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725091,
+        "deployedBy": -1,
+        "entityVersion": 16,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de16f",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725093,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "pageInputs['automationId']"
+            ],
+            "id": "pageInputs"
+          },
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "EXECUTION_TIME",
+              "includePercentageChange": false,
+              "aggregationFunction": "AVG"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "FAILED",
+                  "operator": "EQUAL"
+                },
+                "property": "STATUS"
+              },
+              {
+                "filter": {
+                  "value": "{{ pageInputs['automationId'] }}",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM"
+        },
+        "name": "Avg exc time for failed runs",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.filter.filters[1].filter.value"
+          },
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 16
+    },
+    {
+      "createdTime": 1739882379266,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725099,
+        "deployedBy": -1,
+        "entityVersion": 16,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de16e",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725101,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "pageInputs['automationId']"
+            ],
+            "id": "pageInputs"
+          },
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "EXECUTION_TIME",
+              "includePercentageChange": false,
+              "aggregationFunction": "AVG"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "COMPLETED",
+                  "operator": "EQUAL"
+                },
+                "property": "STATUS"
+              },
+              {
+                "filter": {
+                  "value": "{{ pageInputs['automationId'] }}",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM"
+        },
+        "name": "Avg exc time for successful runs",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.filter.filters[1].filter.value"
+          },
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 16
+    },
+    {
+      "createdTime": 1739882379260,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725106,
+        "deployedBy": -1,
+        "entityVersion": 17,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de16d",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725108,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "EXECUTION_TIME_DATE",
+              "includePercentageChange": false,
+              "aggregationFunction": "GROUP"
+            },
+            {
+              "name": "ID",
+              "includePercentageChange": false,
+              "aggregationFunction": "COUNT"
+            },
+            {
+              "name": "STATUS",
+              "includePercentageChange": false,
+              "aggregationFunction": "GROUP"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              },
+              {
+                "filters": [
+                  {
+                    "filter": {
+                      "value": "COMPLETED",
+                      "operator": "EQUAL"
+                    },
+                    "property": "STATUS"
+                  },
+                  {
+                    "filter": {
+                      "value": "FAILED",
+                      "operator": "EQUAL"
+                    },
+                    "property": "STATUS"
+                  }
+                ],
+                "operator": "OR"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "sorts": [
+            {
+              "field": "EXECUTION_TIME_DATE",
+              "order": "ASC"
+            }
+          ],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "name": "RUN OVER TIME",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 17
+    },
+    {
+      "createdTime": 1739882379255,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725113,
+        "deployedBy": -1,
+        "entityVersion": 17,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de16c",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725115,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "ID",
+              "includePercentageChange": false,
+              "aggregationFunction": "DISTINCT_COUNT"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              },
+              {
+                "filter": {
+                  "value": "FAILED",
+                  "operator": "EQUAL"
+                },
+                "property": "STATUS"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "name": "failed runs",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 17
+    },
+    {
+      "createdTime": 1739882379250,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725143,
+        "deployedBy": -1,
+        "entityVersion": 17,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de16b",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725145,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "ID",
+              "includePercentageChange": false,
+              "aggregationFunction": "DISTINCT_COUNT"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              },
+              {
+                "filter": {
+                  "value": "COMPLETED",
+                  "operator": "EQUAL"
+                },
+                "property": "STATUS"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "name": "successful runs",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 17
+    },
+    {
+      "createdTime": 1739882379243,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725151,
+        "deployedBy": -1,
+        "entityVersion": 17,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de16a",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725152,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "ID",
+              "includePercentageChange": false,
+              "aggregationFunction": "DISTINCT_COUNT"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "name": "total runs",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 17
+    },
+    {
+      "createdTime": 1739882379238,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725158,
+        "deployedBy": -1,
+        "entityVersion": 17,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de169",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725160,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "EXECUTION_TIME",
+              "includePercentageChange": false,
+              "aggregationFunction": "AVG"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "name": "Avg exc time ",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 17
+    },
+    {
+      "createdTime": 1739882379231,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725166,
+        "deployedBy": -1,
+        "entityVersion": 16,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de168",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725168,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "pageInputs['automationId']"
+            ],
+            "id": "pageInputs"
+          },
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "EXECUTION_TIME",
+              "includePercentageChange": false,
+              "aggregationFunction": "AVG"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "FAILED",
+                  "operator": "EQUAL"
+                },
+                "property": "STATUS"
+              },
+              {
+                "filter": {
+                  "value": "{{ pageInputs['automationId'] }}",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM"
+        },
+        "name": "Avg exc time for failed runs",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.filter.filters[1].filter.value"
+          },
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 16
+    },
+    {
+      "createdTime": 1739882379223,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725173,
+        "deployedBy": -1,
+        "entityVersion": 18,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de167",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725175,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "EXECUTION_TIME",
+              "includePercentageChange": false,
+              "aggregationFunction": "AVG"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "COMPLETED",
+                  "operator": "EQUAL"
+                },
+                "property": "STATUS"
+              },
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "name": "Avg exc time for successful runs",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 18
+    },
+    {
+      "createdTime": 1739882379217,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725180,
+        "deployedBy": -1,
+        "entityVersion": 17,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de166",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725182,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "EXECUTION_TIME_DATE",
+              "includePercentageChange": false,
+              "aggregationFunction": "GROUP"
+            },
+            {
+              "name": "ID",
+              "includePercentageChange": false,
+              "aggregationFunction": "COUNT"
+            },
+            {
+              "name": "STATUS",
+              "includePercentageChange": false,
+              "aggregationFunction": "GROUP"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              },
+              {
+                "filters": [
+                  {
+                    "filter": {
+                      "value": "COMPLETED",
+                      "operator": "EQUAL"
+                    },
+                    "property": "STATUS"
+                  },
+                  {
+                    "filter": {
+                      "value": "FAILED",
+                      "operator": "EQUAL"
+                    },
+                    "property": "STATUS"
+                  }
+                ],
+                "operator": "OR"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "sorts": [
+            {
+              "field": "EXECUTION_TIME_DATE",
+              "order": "ASC"
+            }
+          ],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "name": "RUN OVER TIME",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 17
+    },
+    {
+      "createdTime": 1739882379210,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725187,
+        "deployedBy": -1,
+        "entityVersion": 17,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de165",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725189,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "ID",
+              "includePercentageChange": false,
+              "aggregationFunction": "DISTINCT_COUNT"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              },
+              {
+                "filter": {
+                  "value": "FAILED",
+                  "operator": "EQUAL"
+                },
+                "property": "STATUS"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "name": "failed runs",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 17
+    },
+    {
+      "createdTime": 1739882379197,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725194,
+        "deployedBy": -1,
+        "entityVersion": 17,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de164",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725196,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "ID",
+              "includePercentageChange": false,
+              "aggregationFunction": "DISTINCT_COUNT"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              },
+              {
+                "filter": {
+                  "value": "COMPLETED",
+                  "operator": "EQUAL"
+                },
+                "property": "STATUS"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "advancedOptions": {
+          "runBehaviour": "automatic"
+        },
+        "name": "successful runs",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 17
+    },
+    {
+      "createdTime": 1739882379157,
+      "deleted": false,
+      "deploymentState": {
+        "deployedAt": 1749046725202,
+        "deployedBy": -1,
+        "entityVersion": 20,
+        "version": 600
+      },
+      "entityType": "e_data_source",
+      "id": "e_67b47f8ba2108f13598de163",
+      "lastModifiedBy": -1,
+      "modifiedTime": 1749046725203,
+      "ownerUserId": 15080,
+      "properties": {
+        "dpOn": [
+          {
+            "p": [
+              "b_3S4xG['state']['dateTimeFilter']['previousStartTime']",
+              "b_3S4xG['state']['dateTimeFilter']['previousEndTime']",
+              "b_3S4xG['state']['dateTimeFilter']['endTime']",
+              "b_3S4xG['state']['dateTimeFilter']['startTime']"
+            ],
+            "id": "b_3S4xG"
+          }
+        ],
+        "inputs": {
+          "projections": [
+            {
+              "name": "ID",
+              "includePercentageChange": false,
+              "aggregationFunction": "DISTINCT_COUNT"
+            }
+          ],
+          "filter": {
+            "filters": [
+              {
+                "filter": {
+                  "value": "66d9b5c6b4c86058eaa66308",
+                  "operator": "EQUAL"
+                },
+                "property": "WORKFLOW_ID"
+              }
+            ],
+            "operator": "AND"
+          },
+          "searchField": {
+            "fields": []
+          },
+          "entityType": "WORKFLOW_EXECUTION",
+          "includeTotalHits": true,
+          "sorts": [],
+          "timeFilter": {
+            "previousSince": "{{ b_3S4xG['state']['dateTimeFilter']['previousStartTime'] }}",
+            "previousUntil": "{{ b_3S4xG['state']['dateTimeFilter']['previousEndTime'] }}",
+            "until": "{{ b_3S4xG['state']['dateTimeFilter']['endTime'] }}",
+            "since": "{{ b_3S4xG['state']['dateTimeFilter']['startTime'] }}"
+          },
+          "group": "PLATFORM",
+          "additionalProjections": []
+        },
+        "advancedOptions": {
+          "runBehaviour": "automatic"
+        },
+        "name": "total runs",
+        "context": {
+          "appName": "analytics_by_unifyapps",
+          "resourceName": "analytics_by_unifyapps_query_reports"
+        },
+        "type": "APPLICATION",
+        "dp": [
+          {
+            "p": "inputs.timeFilter.previousSince"
+          },
+          {
+            "p": "inputs.timeFilter.previousUntil"
+          },
+          {
+            "p": "inputs.timeFilter.until"
+          },
+          {
+            "p": "inputs.timeFilter.since"
+          }
+        ],
+        "interfacePageId": "e_67b47f8ba2108f13598de162"
+      },
+      "standard": false,
+      "version": 20
+    }
+  ],
+  "type": "HITS"
+}
