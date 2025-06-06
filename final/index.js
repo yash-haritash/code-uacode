@@ -1,6 +1,83 @@
 import { promises as fs } from 'fs';
 import fetch from 'node-fetch';
 
+// Define allowed keys based on the sample array
+const allowedKeys = {
+  e_interface: {
+    entityType: true,
+    id: true,
+    properties: {
+      standard: true,
+      deviceDetails: { base: true },
+      metadata: {
+        logo: { small: true, large: true, favicon: true },
+        _counter: { _pageCount: true, _moduleCount: true }
+      },
+      navigation: { secondary: true, defaultPageId: true, primary: true },
+      interfacePageIdVsSlugMap: true,
+      skipAutoSyncOnModification: true,
+      syncFromSourceCustomer: true,
+      name: true,
+      theme: { defaultScheme: true },
+      locale: { defaultLocale: true },
+      flags: { enableProximityPrefetch: true },
+      customCode: true
+    },
+    tags: true
+  },
+  e_component: {
+    entityType: true,
+    id: true,
+    properties: {
+      layout: { body: true },
+      componentType: true,
+      blocks: {
+        '*': { // Allow dynamic keys
+          component: {
+            componentType: true,
+            appearance: {
+              alignItems: true,
+              reverseOrder: true,
+              styles: {
+                padding: { all: true },
+                flexWrap: true,
+                gap: { all: true },
+                width: true,
+                height: true
+              },
+              wrapContent: true,
+              justifyContent: true,
+              direction: true
+            },
+            content: { blockIds: true }
+          },
+          visibility: { value: true },
+          dpOn: true,
+          dataSourceIds: true,
+          id: true
+        }
+      },
+      name: true,
+      flags: { enablePagePubSubReactivity: true, shouldUseBuiltDependencies: true },
+      interfaceId: true,
+      dataSources: true,
+      slug: true,
+      pageVariables: true
+    }
+  },
+  e_data_source: {
+    entityType: true,
+    id: true,
+    properties: {
+      name: true,
+      interfaceId: true,
+      interfacePageId: true,
+      data: true
+    },
+    tags: true
+  }
+};
+
 async function getHeaders(pageUrl, interfaceId) {
   const timestamp = new Date().toISOString();
   const traceId = `c_${Math.random().toString(36).substr(2, 16)}`;
@@ -186,6 +263,59 @@ async function fetchDataSources(pageUrl, interfaceId, componentId) {
   }
 }
 
+// Helper function to remove specified keys from objects
+function removeKeys(obj, keysToRemove) {
+  if (Array.isArray(obj)) {
+    return obj.map(item => removeKeys(item, keysToRemove));
+  } else if (obj !== null && typeof obj === 'object') {
+    const newObj = {};
+    for (const [key, value] of Object.entries(obj)) {
+      if (!keysToRemove.includes(key)) {
+        newObj[key] = removeKeys(value, keysToRemove);
+      }
+    }
+    return newObj;
+  }
+  return obj;
+}
+
+// Helper function to filter objects to keep only allowed keys
+function filterKeys(obj, allowedKeysMap) {
+  if (Array.isArray(obj)) {
+    return obj.map(item => filterKeys(item, allowedKeysMap));
+  }
+  if (obj === null || typeof obj !== 'object') {
+    return obj;
+  }
+
+  const entityType = obj.entityType;
+  if (!entityType || !allowedKeysMap[entityType]) {
+    return obj; // If entityType not found, return object as-is
+  }
+
+  const allowed = allowedKeysMap[entityType];
+  const filteredObj = {};
+
+  for (const key in obj) {
+    if (allowed[key] === true) {
+      filteredObj[key] = obj[key];
+    } else if (typeof allowed[key] === 'object' && !Array.isArray(allowed[key])) {
+      // Handle nested objects
+      if (allowed[key]['*']) {
+        // Handle dynamic keys (e.g., blocks in e_component)
+        filteredObj[key] = {};
+        for (const subKey in obj[key]) {
+          filteredObj[key][subKey] = filterKeys(obj[key][subKey], { '*': allowed[key]['*'] });
+        }
+      } else {
+        filteredObj[key] = filterKeys(obj[key], allowed[key]);
+      }
+    }
+  }
+
+  return filteredObj;
+}
+
 async function fetchAllAndMerge(pageUrl) {
   let interfaceId;
   try {
@@ -198,11 +328,11 @@ async function fetchAllAndMerge(pageUrl) {
   try {
     // Step 1: Fetch the e_interface
     console.log(`Fetching e_interface for ${interfaceId}...`);
-    const eInterface = await fetchInterface(pageUrl, interfaceId);
+    let eInterface = await fetchInterface(pageUrl, interfaceId);
 
     // Step 2: Fetch all components
     console.log(`Fetching components for ${interfaceId}...`);
-    const components = await fetchComponents(pageUrl, interfaceId);
+    let components = await fetchComponents(pageUrl, interfaceId);
     await fs.mkdir('samples', { recursive: true });
 
     // Save components to ecomponents.json
@@ -229,7 +359,18 @@ async function fetchAllAndMerge(pageUrl) {
     await fs.writeFile(dataSourcesFile, JSON.stringify(allDataSources, null, 2));
     console.log(`Saved ${allDataSources.length} data sources to ${dataSourcesFile}`);
 
-    // Step 4: Create merge.json
+    // Step 4: Remove specified keys from all objects
+    const keysToRemove = ['createdTime', 'deleted', 'deploymentState'];
+    eInterface = removeKeys(eInterface, keysToRemove);
+    components = removeKeys(components, keysToRemove);
+    allDataSources = removeKeys(allDataSources, keysToRemove);
+
+    // Step 5: Filter to keep only allowed keys
+    eInterface = filterKeys(eInterface, allowedKeys);
+    components = filterKeys(components, allowedKeys);
+    allDataSources = filterKeys(allDataSources, allowedKeys);
+
+    // Step 6: Create merge.json
     const mergedData = [
       eInterface,
       ...components,
@@ -239,7 +380,7 @@ async function fetchAllAndMerge(pageUrl) {
     await fs.writeFile(mergeFile, JSON.stringify(mergedData, null, 2));
     console.log(`Saved merged data (1 interface, ${components.length} components, ${allDataSources.length} data sources) to ${mergeFile}`);
 
-    // Step 5: Save metadata
+    // Step 7: Save metadata
     const metadata = {
       timestamp: new Date().toISOString(),
       interfaceId,

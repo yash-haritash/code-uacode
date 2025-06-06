@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-06-06T05:08:21.499Z",
-  "interfaceId": "ua-projects",
-  "pageUrl": "https://a.qa.unifyapps.com/p/0/interfaces/ua-projects/builder/ua-projects-insights?blockId=b_A6rHC",
-  "totalComponents": 1,
-  "totalDataSources": 98
+  "timestamp": "2025-06-06T06:53:52.751Z",
+  "interfaceId": "__ua_api_platform_reporting__",
+  "pageUrl": "https://a.qa.unifyapps.com/p/0/interfaces/__ua_api_platform_reporting__/overview",
+  "totalComponents": 2,
+  "totalDataSources": 24
 }
